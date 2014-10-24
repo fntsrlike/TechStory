@@ -2,7 +2,7 @@ $blockquote: $type-border !default;
 $sans: "PT Sans", "Helvetica Neue", Arial, sans-serif !default;
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif !default;
+$heading-font-family: "PT Serif", "Georgia", Times, "Times New Roman", "Songti SC", "'Hiragino Mincho ProN'", serif, Verdana, sans-serif !default;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
@@ -13,9 +13,10 @@ $header-subtitle-font-family: $heading-font-family !default;
 .sans { font-family: $sans; }
 .serif { font-family: $serif; }
 .mono { font-family: $mono; }
+.normal { font-family: $heading-font-family; }
 
 body > header h1 {
-  font-size: 2.2em;
+  font-size: 2em;
   @extend .heading;
   font-family: $header-title-font-family;
   font-weight: normal;
@@ -23,6 +24,7 @@ body > header h1 {
   margin-bottom: 0.6667em;
 }
 body > header h2 {
+  font-size: 1em;
   font-family: $header-subtitle-font-family;
 }
 
@@ -32,13 +34,14 @@ body {
   @extend .serif;
 }
 h1 {
-  font-size: 2.2em;
+  font-size: 2em;
   line-height: 1.2em;
 }
 
 @media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+  body { font-size: 1.1em; }
+  h1 { font-size: 2em; line-height: 1.2em; }
+  li { margin-bottom: 0.1em; }
 }
 
 #{headings()}{
@@ -48,19 +51,19 @@ h1 {
   font-weight: bold;
 }
 h2, section h1 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 h3, section h2, section section h1 {
   font-size: 1.3em;
 }
 h4, section h3, section section h2, section section section h1 {
-  font-size: 1em;
+  font-size: 1.2em;
 }
 h5, section h4, section section h3 {
-  font-size: .9em;
+  font-size: 1.1em;
 }
 h6, section h5, section section h4, section section section h3 {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 p, article blockquote, ul, ol { margin-bottom: 1.5em; }
@@ -76,6 +79,7 @@ ol { list-style-type: decimal;
 ul, ol { &, ul, ol { margin-left: 1.3em; }}
 ul, ol { ul, ol { margin-bottom: 0em; }}
 
+li { margin-bottom: 0.1em; }
 strong { font-weight: bold; }
 
 em { font-style: italic; }
