@@ -1,5 +1,5 @@
 # About
-See [blog.fntsr.tw](http://blog.fntsr.tw) for a live example.
+See [jekyll.fntsr.tw](http://jekyll.fntsr.tw) for a live example.
 
 The theme was created for use with [Octopress](http://octopress.org/).
 
